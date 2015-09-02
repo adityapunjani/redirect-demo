@@ -1,3 +1,3 @@
 self.onfetch = function(event) {
-  event.respondWith(fetch(event.request), {redirect : "manual"});
+  event.respondWith(fetch(new Request(event.request.url , {redirect : "manual"})));
 };
